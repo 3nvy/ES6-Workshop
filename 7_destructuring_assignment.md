@@ -77,3 +77,70 @@ Para resolver este problema, é possivel dar alias às variavies a quando da des
   console.log(ten);     // 10
   console.log(thirty);  // 30
 </pre>
+
+
+## Valores Default
+Também é possivel usar valores por defeito na destructurização:
+<pre>
+  //Array
+  var list = [ 1 ]
+  var [ x, <b>y = 2</b> ] = list
+  console.log(x);  // 1
+  console.log(y)   // 2
+  
+  //Object
+  var obj = { x: 1 }
+  var { x, <b>y = 2</b> } = obj
+  console.log(x);  // 1
+  console.log(y)   // 2
+</pre>
+  
+ ## Fail-Soft Destructuring
+ Na eventualidade de tentarmos destructurizar um valor que não existe e não tem um default, será atribuido o valor de undefined;
+ 
+ <pre>
+  var list = [ 7, 42 ]
+  var [ a = 1, b = 2, c = 3, d ] = list 
+  console.log(a);  // 7
+  console.log(b)   // 42
+  console.log(c);  // 3
+  console.log(d)   // undefined
+</pre>
+
+## Parameter Context Matching
+Também podemos usar destructurização nos parametros de uma função
+
+### ES5
+<pre>
+   // Array
+   function f (arg) {
+      var name = arg[0];
+      var val  = arg[1];
+      console.log(name, val);
+    };
+  
+  // Object
+  function g (arg) {
+      var n = arg.name;
+      var v = arg.val;
+      console.log(n, v);
+  };
+</pre>
+
+### ES6
+
+<pre>
+   // Array
+   function f ([name, val]) {
+      console.log(name, val);
+    };
+  
+  // Object
+  function g ({name, val}) {
+      console.log(name, val);
+  };
+  
+  function g ({name: n, val: v}) {
+      console.log(n, v);
+  };
+</pre>
