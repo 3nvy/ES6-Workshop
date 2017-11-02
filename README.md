@@ -19,4 +19,5 @@
 - Set / Map
 - BuiltIn Functions
 - Promises
+- Object Literals
 - i18N (experimental)
