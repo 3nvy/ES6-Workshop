@@ -57,10 +57,10 @@ function es5HackTwo (someService) {
 
 - Body Expression
 <pre>
-(parameter) => parameter + " benfica";
+(parameter) => <b>parameter + " benfica"<b>;
 </pre>
 
 - Statement Expression
 <pre>
-parameter => parameter + " benfica";
+<b>parameter</b> => parameter + " benfica";
 </pre>
