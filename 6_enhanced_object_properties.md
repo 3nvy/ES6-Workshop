@@ -1,4 +1,4 @@
-# Enhanced Object Properties
+> # Enhanced Object Properties
 
 - Com a chegada do ES6, foram também introduzidas algumas simplicidades nas definições de objectos.
 
