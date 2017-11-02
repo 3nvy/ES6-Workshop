@@ -16,7 +16,8 @@
 - Destructuring Assignment
 - Modulização
 - Classes
+- Object Literals
 - Set / Map
 - Promises
-- Object Literals
+- Async / Await
 - i18N (experimental)
