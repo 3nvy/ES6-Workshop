@@ -13,7 +13,7 @@
 - Enhanced Object Properties
   - Property Shorthand
   - Computed Property Names
-- Variable Destructuring
+- Destructuring Assignment
 - Modulização
 - Classes
 - Set / Map
