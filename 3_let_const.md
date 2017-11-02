@@ -40,7 +40,7 @@
   const x = "badjoras"
   <b>x = 'undersnight';</b>
   
-  //Return error, ptara cannot be re-assigned
+  //Return error, x cannot be re-assigned
 </pre>
 
 - Não tem Hoisting e prevente Mutabilidade*
