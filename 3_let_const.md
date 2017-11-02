@@ -3,7 +3,7 @@
 ## Var
 <pre>
   elem.innerHTML = x;
-  var ptara = 'badjoras';
+  var x = 'badjoras';
   
   // elem will have value of "badjoras"
 </pre>
