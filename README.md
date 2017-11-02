@@ -10,8 +10,9 @@
   - Parametros Default
   - Operador Rest / Spread
 - Template Literals
-- Property Shorthand
-- Computed Property Names
+- Enhanced Object Properties
+  - Property Shorthand
+  - Computed Property Names
 - Variable Destructuring
 - Modulização
 - Classes
