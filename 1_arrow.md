@@ -20,7 +20,7 @@ function es5HackOne (someService) {
   this.foo = 'Hello';
   someService.doSomething(function (response) {
     this.foo = response;
-  }.bind(this));
+  }<b>.bind(this)</b>);
 }
 </pre>
 
@@ -28,10 +28,10 @@ ou
 
 <pre>
 function es5HackTwo (someService) {
-  var self = this;
+  <b>var self = this;</b>
   that.foo = 'Hello';
   someService.doSomething(function (response) {
-    self.foo = response;
+    <b>self</b>.foo = response;
   });
 }
 </pre>
