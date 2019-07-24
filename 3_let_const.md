@@ -61,7 +61,7 @@ On the above example, we are trying to re-assign a new object to `x`, which is g
   
   // x => value2
 </pre>
-Altho in here, we are trying to change a property of the object already assigned to x, which is going to allow
+Altho in here, we are trying to change a property of the object already assigned to x, which is going to work
 
 To prevent this, we can use the Object method called `freeze()`
 Once called onto a variable, the value itself can't be modified either (doesnt work with types like Set or Map)
