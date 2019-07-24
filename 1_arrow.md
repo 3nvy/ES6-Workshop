@@ -10,7 +10,7 @@ function es5this(someService) {
 }
 </pre>
 
-O scope do **this** é arbitrario, neste caso:
+The scope of **this** its contained within each individual function, in this case:
 
 `this.foo === undefined`
 
@@ -24,7 +24,7 @@ function es5HackOne (someService) {
 }
 </pre>
 
-ou
+or
 
 <pre>
 function es5HackTwo (someService) {
@@ -47,7 +47,7 @@ function es5HackTwo (someService) {
 }
 </pre>
 
-### Abreviações
+### Abreviations
 
 <pre>
 <b>(parameter)</b> => <b>{
