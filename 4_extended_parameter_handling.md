@@ -1,4 +1,4 @@
-# Parametros Default
+# Default Parameters
 
 ## ES5
 <pre>
@@ -9,8 +9,8 @@ function defaultParams(argOne, argTwo){
   console.log(argTwo);
 }
 
-defaultParams()           // Logs <b>default1</b> e <b>default2</b>
-defaultParams('com es5')  // Logs <b>com es5</b> e <b>default2</b>
+defaultParams()           // Logs <b>default1</b> and <b>default2</b>
+defaultParams('with es5')  // Logs <b>with es5</b> and <b>default2</b>
 </pre>
 
 ## ES6
@@ -22,17 +22,17 @@ function defaultParams(<b>argOne = 'default1'</b>, <b>argTwo = 'default2'</b>){
 }
 
 defaultParams()           // Logs <b>default1</b> e <b>default2</b>
-defaultParams('com es6')  // Logs <b>com es6</b> e <b>default2</b>
+defaultParams('with es6')  // Logs <b>with es6</b> e <b>default2</b>
 </pre>
 
 ***
 
-# Parametro Rest
+# Rest Parameter
 
 ## ES5
 <pre>
   function f (x, y) {
-      <b>var a = Array.prototype.slice.call(arguments, 2);</b>
+      <b>var a = Array.prototype.slice.call(*arguments*, 2);</b>
       return a.length;
   };
   f(1, 2, <b>"hello", true, 7</b>) // Returns 3
@@ -53,7 +53,7 @@ defaultParams('com es6')  // Logs <b>com es6</b> e <b>default2</b>
 
 ***
 
-# Operador Spread
+# Spread Parameter
 
 ## ES5
 <pre>
