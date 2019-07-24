@@ -8,7 +8,7 @@
   // elem will have value of "badjoras"
 </pre>
 
-- Mutabilidade
+- Mutability
 - Hoisting
 
 ## Hoisting
@@ -16,7 +16,7 @@
   elem.innerHTML = x;
   <b>var x = 'badjoras';</b>
 </pre>
-- Variavel `x` usada antes de ser declarada
+- Variable `x` is used before being declared
 
 ## Let
 <pre>
@@ -26,7 +26,7 @@
   //Return error, x is not defined
 </pre>
 
-- Igual a `var` mas sem Hoisting
+- Equals to `var` but doesn't allow Hoisting or re-declaration
 
 ## Const
 <pre>
@@ -43,17 +43,17 @@
   //Return error, x cannot be re-assigned
 </pre>
 
-- Não tem Hoisting e prevente Mutabilidade*
+- No Hoisting or Mutability*
 
 ***
 
-Imutabilidade do tipo **const** prevente re-assignação, mas não prevente mutabilidade do valor.
+**const** only prevents the re-assignment of the variable, not the mutability of the value itself.
 
 <pre>
   const x = {key: 'value'}
   <b>x = {key: 'value2}</b>
 </pre>
-O exemplo acima irá dar erro porque estamos a tentar reassignar a variavel `x` com um novo objecto
+On the above example, we are trying to re-assign a new object to `x`, which is going to thrown an error
 
 <pre>
   const x = {key: 'value'}
@@ -61,12 +61,10 @@ O exemplo acima irá dar erro porque estamos a tentar reassignar a variavel `x` 
   
   // x => value2
 </pre>
+Altho in here, we are trying to change a property of the object already assigned to x, which is going to allow
 
-No entanto podemos alterar as propriedade do objecto assignado a `x`, mesmo que este seja uma **constante**
-
-
-Para prevenir que isto aconteça, teremos de usar um metodo do Objecto chamado `freeze()`. 
-Este metodo prevente que qualquer tipo de objecto possa ser manipulado, usando em combinação com **cont** temos entao um verdadeiro objecto imutavel.
+To prevent this, we can use the Object method called `freeze()`
+Once called onto a variable, the value itself can't be modified either (doesnt work with types like Set or Map)
 
 <pre>
   const x = Object.freeze({key: 'value'});
