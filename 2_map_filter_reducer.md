@@ -15,7 +15,7 @@ for(var i = 0; i < 10; i++){
 [1, 2, 3, 4].map(num => num * 2);   //return [2, 4, 6, 8]
 </pre>
 
-- Always returns the same amount of data, if the array had 5 entreis, it wiill always return 5 entries
+- Always returns the same amount of data, if the array had 5 entries, it wiill always return 5 entries
 - Allows for different data to be returned
 
 ## Filter
