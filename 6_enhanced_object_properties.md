@@ -1,9 +1,9 @@
 > # Enhanced Object Properties
 
-- Com a chegada do ES6, foram também introduzidas algumas simplicidades nas definições de objectos.
+- With ES6, there's been multiple improvements on object definitions.
 
 ## Property Shorthand
-- É uma sintaxe simplificada para definir propriedades de um objecto;
+- Simplified syntax to define object properties
 
 ### ES5
 <pre>
@@ -14,7 +14,6 @@
 </pre>
 
 ### ES6
-- Se o nome da propriedade for igual ao nome do atributo, podemos ocultar o último.
 
 <pre>
   var x = 1;
@@ -23,31 +22,33 @@
   var obj = { <b>x, y</b> } // => { x: x, y: y }
 </pre>
 
+- If the property has the same name as the attribute, the latest can be omited.
+
 ## Computed Property Names
-- Permite usar nomes calculados na definição de objectos
+- Allows computed property names on object definition
 
 ### ES5
-- Em ES5, não podemos calcular o nome directamente na definição do objecto, tendo posteriormente de adicionar a propriedade manualmente
+- On ES5, we can't use computed property names on the object definition, so we have to mutate the object afterwards
 
 <pre>
-  var name = 'propriedade';
+  var name = 'property';
   var obj = {
     foo: "bar"
   };
   <b>obj[ name + '2' ] = 42;</b>
   
-  // => {foo: 'bar', propriedade2: 42}
+  // => {foo: 'bar', property2: 42}
 </pre>
 
 ### ES6
-- Em ES6, podemos agora calcular o nome da propriedade directamente na definição do objecto
+- But with ES6, we can now do it on object definition, the same way we would do after the definition on ES5
 
 <pre>
-  var name = 'propriedade';
+  var name = 'property';
   var obj = {
     foo: "bar",
-    <b>[name + '2']</b>: 42
+    <b>[`${name}2`]</b>: 42
   };
 
-  // => {foo: 'bar', propriedade2: 42}
+  // => {foo: 'bar', property2: 42}
 </pre>
