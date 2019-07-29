@@ -17,8 +17,8 @@ Template Literals exist to solve a big problem over concatenation of string. On 
 
 ### ES6
 <pre>
-  var nome = 'Renato';
-  var idade = 25;
+  var name = 'Renato';
+  var age = 25;
   var job = 'developer';
   var msg = <b>`</b>Hello, my name is <b>${name}</b>, I;m <b>${age}</b> years old ad I work as a <b>${job}</b><b>`</b>
 
