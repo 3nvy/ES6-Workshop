@@ -1,10 +1,10 @@
 > # Destructuring Assignment
 
-Destructuring é uma sintaxe que permite separar valores de arrays, ou propriedades de objectos, em variaveis distintas.
+Destructuring is a syntax that allows to separate values from arrays or properties from object literals, into distinct variables
 
 ## Array Matching
 
-- Permite separar valores especificos de um array e atribuilos directamente para variaveis separadas.
+- Allows to separate specific  values from an array into separate variables.
 
 ### ES5
 <pre>
@@ -24,7 +24,7 @@ Destructuring é uma sintaxe que permite separar valores de arrays, ou proprieda
   console.log(b); // 30
 </pre>
 
-- Podemos também usar o spread operator
+- We can also use a rest operator
 <pre>
   var list = [10, 20, 30, 40];
   [a, b, <b>...rest</b>] = list;
@@ -35,8 +35,9 @@ Destructuring é uma sintaxe que permite separar valores de arrays, ou proprieda
 
 ## Object Matching
 
-- Permite separar propriedades especificas de um objecto e atribuilas directamente para variaveis separadas.
-No caso dos objectos, o nome da variavel a extrair tem de sre o nome do atributo do objecto.
+- Allows to separate object literals properties into separate variables. 
+
+- Contrary to arrays, the destructured properties need to match the property names within the object.
 
 ### ES5
 <pre>
@@ -66,11 +67,9 @@ No caso dos objectos, o nome da variavel a extrair tem de sre o nome do atributo
 
 ## Alias
 
-Como vimos, ao fazer a destructurização de propriedades de um objecto, o nome da variável tem de ser 
-equivalente ao nome do atributo, o que nem sempre é a melhor opção, uma vez que pudemos ser obrigados a definir variaveis
-já existentes, ou simplesmente porque o nome da variavel não é explicita.
+As explained before, the destructured properties from an object literal need to match the property names within the object, but this isnt always ideal, especially if we dont control the data structure, for example, if it comes from an external API call, or if the destructured property name already exists.
 
-Para resolver este problema, é possivel dar alias às variavies a quando da destructurização:
+To solve this problem, ES6 allows you to give an alias to every destructured property, effectively  exporting it into a different variable name:
 <pre>
   var obj = { a: 10, b: 20, c: 30, d: 40 };
   var { a<b>: ten</b>, c<b>: thirty</b>} = obj;
@@ -80,7 +79,7 @@ Para resolver este problema, é possivel dar alias às variavies a quando da des
 
 
 ## Valores Default
-Também é possivel usar valores por defeito na destructurização:
+It's also possible to define default values to destructured properties:
 <pre>
   //Array
   var list = [ 1 ]
@@ -95,8 +94,8 @@ Também é possivel usar valores por defeito na destructurização:
   console.log(y)   // 2
 </pre>
   
- ## Fail-Soft Destructuring
- Na eventualidade de tentarmos destructurizar um valor que não existe e não tem um default, será atribuido o valor de undefined;
+ ## Soft-Fail Destructuring
+ If we try destructuring a value that doesnt exist, is out-of-bounds and doesnt have a default value, it will sof-fail by giving the property an undefined value.
  
  <pre>
   var list = [ 7, 42 ]
@@ -108,7 +107,7 @@ Também é possivel usar valores por defeito na destructurização:
 </pre>
 
 ## Parameter Context Matching
-Também podemos usar destructurização nos parametros de uma função
+We cal also use destructuring on parameters from a function
 
 ### ES5
 <pre>
