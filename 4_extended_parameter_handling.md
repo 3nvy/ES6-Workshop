@@ -38,7 +38,8 @@ defaultParams('with es6')  // Logs <b>with es6</b> e <b>default2</b>
   f(1, 2, <b>"hello", true, 7</b>) // Returns 3
 </pre>
 
-- É necessário usar um `slice` na variavel `arguments`. Implica hardcoded slice start.
+- `arguments` is a reserved word that contains every parameter passed into the function
+- We than slice `arguments` from index 2 so we get all remaining parameters
 
 
 ## ES6
@@ -49,7 +50,7 @@ defaultParams('with es6')  // Logs <b>with es6</b> e <b>default2</b>
   f(1, 2, <b>"hello", true, 7</b>) // Returns 3
 </pre>
 
-- Usando o parametro `rest (...)` podemos directamente manipular a variavel contendo todos os outros argumentos não listados especificamente
+- Using `rest (...)`, as the word indicates, we get all other parameters other than the ones explicitly passed into the function definition.
 
 ***
 
