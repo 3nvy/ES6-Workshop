@@ -1,17 +1,33 @@
-> # Modularização
+> # Modularization
 
 ## Export / Import
-A modularização foi sem dúvida uma das features mais bem recebidas do ES6, uma vez que nos permite facilmente dividir toda
-a nossa aplicação em módulos.
+Modularization was without a doubt one of the most well received features of ES6, as of that point we were able to easily separate the app into different modules.
 
-No tempo do ES5, a maneira mais habitual de inicializar uma aplicação seria correr todos os "bocados" que a compoêm por ordem,
-e atribui-los a variáveis globais para que pode-sem ser acedidos em qualquer parte da aplicação. No entanto, com a chegada dos
-módulos no ES6, podemos divir a nossa aplicação em pedaços mais pequenos e chama-los / instancia-los apenas quando necessário.
+Up until this point, with ES5, the most usual way to initialize an app was to run every "module" that composes it in order, and assign them to global variables so they could be accessed anywhere on the app. Not only this would occupy unnecessary memory, it was also not very safe as your entire app structure would be exposed for everyone to see. Normaly the code would be uglified prior to be exposed, but this required extra effort and wasnt very performatic.
 
+With ES6 tho, we can now use true modulation, by separating the logic into different modules (files) and we could instantiate them only when necessary, no longer needing to exposed them on global variables and we could bundle everything into a single file and uglify that file, making it hard for prying eyes to take a look into how the application works.
+
+Depending on how we are separating concerns within each module, we may want to export the module as an all, or we may want to export different pieces of the module into separate variables:
+
+## Default Exports
+A very usual use-case for a **default export** is a Class module. In this case, the entire module is composed of a single class, so since its a single export, we use the keyword `default` next to `export` so the engine knows the modules is composed of a single export
+
+<pre>
+  //  module/TestClass.js
+  export <b>default</b> Class TestClass {
+    constructor() {
+        console.log('This is a Class!')
+    }
+  };
+  
+  //  someApp.js
+  import <b>TestClass</b> from "module/TestClass"
+</pre>
 
 ## Named Exports
-Se tivermos uma biblioteca com vários metodos / variaveis que queiramos que sejam acessiveis podemos usar **named exports**,
-atribuindo sempre um nome ao metodo ou à variavel;
+Although sometimes we may want to export pieces of the modules separately. This is very common on libraries, since it allows us to export only the parts of the library that we need, rather than importing everything and endup not using 90% of it, wasting space and memory.
+
+This are called **named exports**
 
 <pre>
   //  lib/math.js
@@ -25,19 +41,4 @@ atribuindo sempre um nome ao metodo ou à variavel;
   //  otherApp.js
   <b>import { sum, pi }</b> from "lib/math"
   console.log("2π = " + <b>sum(pi, pi)</b>)
-</pre>
-
-## Default Exports
-No caso de termos uma biblioteca que terá apenas um metodo / variavel acessivel ao exterior, não necessitamos de atribuir um
-**named export**, podemos simplesmente usar a palavra reservada `default`.
-
-- Notar que no caso de um **default export**, não necessitamos de atribuir um alias ao import, uma vez que só existe um endpoint,
-podems atribuir qualquer nome.
-
-<pre>
-  //  lib/double.js
-  export <b>default</b> x => x * 2;
-  
-  //  someApp.js
-  import <b>Double</b> from "lib/double"
 </pre>
