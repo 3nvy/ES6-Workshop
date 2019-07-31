@@ -1,9 +1,9 @@
 > # Set / Map
 
-O ES6 tambem trouxe com ele duas novas estruturas de dados:
+ES6 also brough new data structures:
 
 ## Set
-É uma colecção de valores unicos capaz de armazenar qualquer tipo de dados.
+`Set` is a collection of unique values capable of storing any type of data.
 
 <pre>
   let s = new Set()
@@ -13,7 +13,15 @@ O ES6 tambem trouxe com ele duas novas estruturas de dados:
 </pre>
 
 ## Map
-É uma estrutura que guarda informação em pares **key/value**.
+`Map` is a structure that stores data in **key/value** pars.
+
+In reality, the above definition is a normal definition for an object literal `{}`, so some people were confused as to what `Map` differs from it.
+
+One of the big limitation of an Object Literal it that its not iterable, so if we want to go over every entry of the object, we would have to use `Object.entries({...})`.
+
+Another limitation is that the object parameters can only be of type string.
+
+`Map` solves both problems, it makes it so your object is iterable using First-Class functions like `map`, `filter`, `forEach`, ... and you can set the parameter to any type, even an object or an array.
 
 <pre>
   var map = new Map(),
@@ -21,17 +29,8 @@ O ES6 tambem trouxe com ele duas novas estruturas de dados:
   val3 = { key: 'value'};
   map.set(0, 'val1');
   map.set('1', val2);
-  map.set({ key: 2 }, val3);
+  map.set(**{ key: 2 }**, val3);
   
   console.log(map); // Map {0 => 'val1', '1' => 'val2', Object {key: 2} => Object {key: 'value'}}
 </pre>
 
-Na verdade, a definição acima é a definição de um objecto `{}` em JS, e algumas pessoas têm dificuldade em perceber porque devem usar um `Map` am invez de `{}`.
-
-É verdade que na maioria das vezes, usar um simples objecto `{}` pode ser mais simples que um `Map`, no entanto existem demasiadas limitações se quiser-mos realmente usar algo complexo.
-
-Uma das maiores limitações é que um `{}` não é iteravel, obrigando-nos a usar algo como `Object.entries({...})` para transformar o objecto num array e podermos assim iterar sobre ele.
-
-Outra grande limitação é que os atributos de um `{}` só podem ser do tipo string.
-
-Num `Map` não existe nenhuma destas limitações, ele tem um iterador próprio, e aceita qualquer tipo de dado, tanto para o atributo como para o valor.
