@@ -1,4 +1,4 @@
-# Let e Const
+# Let and Const
 
 ## Var
 <pre>

@@ -4,7 +4,7 @@
 
 - [Arrow Functions](https://gitlab.com/3nvy/ES6-Workshop/blob/master/1_arrow.md)
 - [Map / Filter / Reducer / forEach](https://gitlab.com/3nvy/ES6-Workshop/blob/master/2_map_filter_reducer.md)
-- [let e const](https://gitlab.com/3nvy/ES6-Workshop/blob/master/3_let_const.md)
+- [Let and Const](https://gitlab.com/3nvy/ES6-Workshop/blob/master/3_let_const.md)
 - [Extended Parameter Handling](https://gitlab.com/3nvy/ES6-Workshop/blob/master/4_extended_parameter_handling.md)
   - Parametros Default
   - Operador Rest / Spread
