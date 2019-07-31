@@ -43,7 +43,7 @@ else {
 }
 </pre>
 
- - OR Short-Hand statement
+ - OR Shorthand statement
 <pre>
 var street = user.data || <b>'default value'</b>;
 </pre>
@@ -57,7 +57,7 @@ street === 'default value'  #if user.data is false
 ```
 
 
-## Combined Short-Hand statements
+## Combined Shorthand statements
 
 <pre>
 var street = user.data && user.data.address && <b>user.data.address.street</b> || <b>'default value'</b>;

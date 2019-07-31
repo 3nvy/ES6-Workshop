@@ -19,4 +19,5 @@
 - [Set / Map](https://gitlab.com/3nvy/ES6-Workshop/blob/master/11_set_map.md)
 - [Promises](https://gitlab.com/3nvy/ES6-Workshop/blob/master/12_promises.md)
 - [Async / Await](https://gitlab.com/3nvy/ES6-Workshop/blob/master/13_async_await.md)
+- [Shorthand Conditions](https://gitlab.com/3nvy/ES6-Workshop/blob/master/14_shorthand_conditions.md)
 - [Extras](https://gitlab.com/3nvy/ES6-Workshop/blob/master/extra.md)
