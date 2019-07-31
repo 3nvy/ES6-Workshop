@@ -29,7 +29,7 @@ Another limitation is that the object parameters can only be of type string.
   val3 = { key: 'value'};
   map.set(0, 'val1');
   map.set('1', val2);
-  map.set(**{ key: 2 }**, val3);
+  map.set(<b>{ key: 2 }</b>, val3);
   
   console.log(map); // Map {0 => 'val1', '1' => 'val2', Object {key: 2} => Object {key: 'value'}}
 </pre>
