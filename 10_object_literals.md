@@ -1,6 +1,6 @@
 > # Object Literals
 
-Object Literals são basicamente Singletons, sendo assim optimos se quisermos garantir que apenas uma instancia do objecto existe em memória. A sua estrutura também é muito simples sendo bastante mais fácil do que criar um Singleton usando um construtor.
+Object literals are the standartd "object" you would define on JavaScript. All Object Literals are `Singletons` whitch means that only one instance of the object can exist in memory.
 
 <pre>
   const objectLiteral = {
@@ -12,4 +12,4 @@ Object Literals são basicamente Singletons, sendo assim optimos se quisermos ga
   }
 </pre>
 
-Normalmente são usados como repositorio de dados, uma vez que só podem ser instanciados uma unica vez, garantimos assim que o acesso a esses dados seja unico em qualquer parte da aplicação
+Object Literals are often used as data repositories, given they can only be instantiated once, it assures that the same data can be accessed on any part of the app.
