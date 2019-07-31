@@ -44,7 +44,7 @@ The definition of a `Class` its identical to other programming languages, its co
 
 
 ## Class Inheritance
-Herança num objecto do tipo `Class` é muito mais intuitivo que o uso de prototipos, usando para isso a palavra reservada `extends` e o metodo `super()` para inicializar o construtor da class pai.
+Inheritance on a `Class` its much more intuitive then on `Prototypes`, using the reserved word `extend` and the method `super()` to initialize the parent constructor
 
 <pre>
   class Rectangle <b>extends</b> Shape {
@@ -57,7 +57,7 @@ Herança num objecto do tipo `Class` é muito mais intuitivo que o uso de protot
 </pre>
 
 ## Static Members
-Também é possivel criar metodos estáticos numa `Class`. Um metodo estático é um metodo que pode ser chamado sem instanciar o objecto a que ele pertence.
+Its also possible to create static methods. These are methods that can be accessed w/t instantiating the `Class`
 
 ```
   class Rectangle extends Shape {
@@ -68,4 +68,6 @@ Também é possivel criar metodos estáticos numa `Class`. Um metodo estático �
   }
 ```
 var defRectangle = ~~new~~ Rectangle.defaultRectangle();
+
+
 
