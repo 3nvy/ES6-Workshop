@@ -1,10 +1,10 @@
 > # Async / Await
 
-Com o uso de Promises, fazer código asincrono tornou-se muito simples, no entanto em termos de estrutura pode não ser o melhor, uma vez que temos sempre de usar callbacks.
+With Promises, using asynchronous code became very easy, but the code can become unreadable very easily due to the use of **callbacks**
 
-Com a chegada do ES7 (ou stage-2), temos agora duas novas palavras reservadas, **async** e **await**. Estas duas palavras reservadas trabalham em conjunto e permitem escrever código asincrono de forma sincrona!
+With **stage-2**, we now have 2 new reserved words `async` and `await` which allows us to write asynchronous in a synchronous structure.
 
-### Sem Async / Await
+### W/t Async / Await
 
 <pre>
   (() => {
@@ -20,7 +20,7 @@ Com a chegada do ES7 (ou stage-2), temos agora duas novas palavras reservadas, *
 </pre>
 
 
-### Com Async / Await
+### With Async / Await
 
 <pre>
   (<b>async</b> () => {
@@ -33,16 +33,16 @@ Com a chegada do ES7 (ou stage-2), temos agora duas novas palavras reservadas, *
 </pre>
 
 ## Debugging
-Fazer debug usando Promises e Callbacks sempre trouxe os seus problemas:
+Debugging Promises and Callbacks was always a pain. For instances:
 
-1. Não é possivel colocar breakpoints em arrow functions que retornem uma expressão;
+1. Its not possible to place breakpoints on arrow functions that return expressions; (Its now possible with the use of a [library](https://github.com/georgebonnr/bug))
 
-2. Não é possivel usar atalhos como `step-over` para passar para o proximo `then`, pois estes atalhos só funcionam em código sincrono.
+2. Its not possible to use shortcuts like `step-over` to go over to the next `then()` because those shortcuts only work o synchronous code
 
-Usando Aync / Await, reduzimos a necessidade de uso de arrow functions, e podemos usar os atalhos para debug.
+Use Async / Await we dont need arrow functions and we can use the shortcuts, making debug easier an linear.
 
 ## Error Handling
-Os erros são tratados usando `try-catch`. Apesar de funcionar, eu acho que o uso de try-catch não fica muito bonito e em alguns casos pode até criar uma cascata de try-catches que fazem com que o código nem seja mais legivel.
+The errors are handled by the use of `try-catch` statements. Although the code can become very messy with a cascade of try-catche's for each condition, as per the example bellow:
 
 <pre>
 async function asyncTask(cb) {  
@@ -78,10 +78,10 @@ async function asyncTask(cb) {
     cb(null, savedTask);
 }
 </pre>
-> Retirado de [blog.grossman.io](http://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/)
+> From [blog.grossman.io](http://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/)
 
 
-Existem no entanto diversas bibliotecas que tratam os erros em funçoes async de uma maneira mais legivel. A minha favorita chama-se [await-to-js](https://github.com/scopsy/await-to-js) e baseia-se na syntax de GO, fazendo com que a função retorne 2 parametros, o erro e a resposta, tornando o código mais limpo e simples de entender.
+There are some libraries that allows us to handle the errors in a different fashion. My favourite and recommended is [await-to-js](https://github.com/scopsy/await-to-js) and its based on GO syntax, making each Promise return 2 statements, the response and the error, making the code cleaner.
 
 <pre>
 async function asyncTask(cb) {
