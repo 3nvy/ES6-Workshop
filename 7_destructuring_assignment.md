@@ -78,7 +78,7 @@ To solve this problem, ES6 allows you to give an alias to every destructured pro
 </pre>
 
 
-## Valores Default
+## Default Values
 It's also possible to define default values to destructured properties:
 <pre>
   //Array
