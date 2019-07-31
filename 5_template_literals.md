@@ -1,6 +1,6 @@
 # Template Literals
 
-Template Literals exist to solve a big problem over concatenation of string. On ES5 strings could become very complex and unredabe given their complexity.
+Template Literals exist to solve a big problem over concatenation of strings. On ES5 strings could become very complex and unreadable given their complexity.
 
 
 ## String Interpolation
