@@ -1,6 +1,6 @@
 # ES6-Workshop
 
-## Indice
+## Index
 
 - [Arrow Functions](https://gitlab.com/3nvy/ES6-Workshop/blob/master/1_arrow.md)
 - [Map / Filter / Reducer / forEach](https://gitlab.com/3nvy/ES6-Workshop/blob/master/2_map_filter_reducer.md)
